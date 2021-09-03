@@ -4,6 +4,7 @@ from django.urls import reverse
 
 
 class AdminSitesTests(TestCase):
+    """"Test case for Admin page site"""
 
     def setUp(self):
         self.client = Client()
