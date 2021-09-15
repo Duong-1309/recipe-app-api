@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rws%k456_#pg+o05zo=e@i6392n8j%cqmp6ur1n&+ym(=24$+m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'core',
     'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
