@@ -1,11 +1,15 @@
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from recipe.views import TagViewSet
+from recipe.views import IngredientViewSet, TagViewSet
+
+
+router = DefaultRouter()
+router.register('tags', TagViewSet)
+router.register('ingredients', IngredientViewSet)
 
 app_name = 'recipe'
 
-urlpatterns = []
-
-tag_router = DefaultRouter()
-tag_router.register('tags', TagViewSet)
-urlpatterns += tag_router.urls
+urlpatterns = [
+    path('', include(router.urls))
+]
