@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/core/', include('core.urls')),
 ]
 
+# Config drf_yasg
 schema_view = get_schema_view(
     openapi.Info(
         title="Recipe APIs",
